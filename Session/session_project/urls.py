@@ -1,5 +1,5 @@
 """
-URL configuration for forms project.
+URL configuration for session_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from product.views import index
+
+
+
 urlpatterns = [
-    path('', include('accounts.urls')),
+    path('', index, name='index'),              # product 앱의 URL을 포함합니다.
+    path('product/', include('product.urls', namespace='product')),  # product 앱의 URL을 포함합니다.
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
 ]
