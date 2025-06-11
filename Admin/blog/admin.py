@@ -118,7 +118,7 @@ class PostAdmin(admin.ModelAdmin):
     
     # 액션 설정
     # ⭐ 정의한 액션 메소드를 actions에 추가하여
-    # 관리자 페이지에서 사용할 수 이쏘록 합니ㅏㄷ.
+    # 관리자 페이지에서 사용할 수 있도록 합니다..
     actions = ['make_public']
     
     @admin.action(description='일광 공개 처리')

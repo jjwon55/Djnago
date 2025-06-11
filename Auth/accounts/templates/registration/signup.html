@@ -23,6 +23,28 @@
                     <label for="{{ form.password2.id_for_label }}" class="form-label">비밀번호 확인</label>
                     {{ form.password2 }}
                 </div>
+                <div class="form-group">
+                    <label for="{{ form.nickname.id_for_label }}" class="form-label">닉네임</label>
+                    {{ form.nickname }}
+                </div>
+                <!-- gender : radio -->
+                <div class="form-group">
+                    <label for="{{ form.gender.id_for_label}}" class="form-label">성별</label>
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="gender" id="id_gender_male" value="남자">
+                            <label for="id_gender_male">남자</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="gender" id="id_gender_female" value="여자">
+                            <label for="id_gender_female">여자</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="{{ form.age.id_for_label }}" class="form-label">나이</label>
+                    {{ form.age }}
+                </div>
                 <div class="d-grid my-3">
                     <button type="submit" class="btn btn-primary">가입하기</button>
                 </div>
